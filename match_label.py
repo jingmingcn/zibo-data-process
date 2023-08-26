@@ -8,7 +8,7 @@ datafile.csv 原始的数据文件
 
 with open('filename.csv',newline='') as csvfile:
   with open('filename_label.csv', 'w') as labelfile:
-    with open('datafile.csv') as datafile:
+    with open('datafile.csv', encoding='utf-8') as datafile:
       csvreader = csv.DictReader(csvfile, delimiter=',', quotechar='|')
       datareader = csv.DictReader(datafile)
       fieldnames = ['filename','id_card','label']
