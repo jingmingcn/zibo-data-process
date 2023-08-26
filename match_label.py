@@ -1,9 +1,13 @@
 import csv
 
-filename_label = {}
+'''
+filename.csv 文件名数据文件
+filename_label.csv 匹配疾病标签后的数据文件
+datafile.csv 原始的数据文件
+'''
 
 with open('filename.csv',newline='') as csvfile:
-  with open('filename_label.csv') as labelfile:
+  with open('filename_label.csv', 'w') as labelfile:
     with open('datafile.csv') as datafile:
       csvreader = csv.DictReader(csvfile, delimiter=',', quotechar='|')
       datareader = csv.DictReader(datafile)
